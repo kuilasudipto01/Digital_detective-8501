@@ -39,3 +39,11 @@ Enter a positive decimal number when prompted. The program displays the binary a
 
 ## About
 Each mission was documented and committed separately with a meaningful commit message. All work is my own.
+
+## My Learning
+
+Here are some key things I have learned during this assignment:
+
+1. **The IPOS model** — Every computer activity follows the Input-Process-Output-Storage cycle. Understanding this helped me see how hardware components work together to accomplish tasks.
+2. **Terminal commands** — The command line gives direct and efficient control over files. Learning flags and pipes showed me how simple commands can be combined into powerful operations.
+3. **Operating system responsibilities** — The OS is the bridge between hardware and software. It manages processes, memory, devices, files and security so applications do not have to handle these directly.
