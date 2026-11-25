@@ -1,0 +1,62 @@
+# Mission 7 — How Computers Communicate
+
+## 1. Task / Objective
+Explain basic network types and concepts, observe network lookup and connectivity information, and describe what happens when a website opens.
+
+## 2. Work Completed
+- Completed the network-concepts table with explanations and examples.
+- Used `ping` and `nslookup` to observe connectivity and DNS lookup.
+- Wrote a 7-step explanation of what happens when a website is opened.
+
+## 3. Commands / Tools Used
+
+| Command | Purpose |
+|---------|---------|
+| `ping -c 4 example.com` | Tests whether the computer can reach a remote server by sending small data packets and measuring response time |
+| `nslookup example.com` | Queries DNS to find the IP address associated with a domain name |
+
+## 4. My Understanding
+
+### Task 7.1 — Network Concepts
+
+| Concept | Explanation | Example |
+|---------|-------------|---------|
+| **LAN** (Local Area Network) | A network that covers a small area like a single room, home or office. Devices connect through a switch or Wi-Fi router. | The Wi-Fi network in my home connecting my laptop, phone and printer |
+| **MAN** (Metropolitan Area Network) | A network spanning a city or large campus, larger than a LAN but smaller than a WAN. | A university network connecting multiple buildings across a campus |
+| **WAN** (Wide Area Network) | A network covering large geographical areas — cities, countries or the entire world. | The internet itself is the largest WAN |
+| **DNS** (Domain Name System) | A system that translates human-readable domain names into IP addresses so computers can locate each other. | Typing `google.com` → DNS resolves it to an IP like `142.250.190.46` |
+| **Router** | A device that connects different networks and forwards data packets between them, choosing the best path. | My home router connects my LAN to my internet service provider's network |
+| **Protocol** | A set of rules that devices follow to communicate. Protocols define how data is formatted, sent and received. | HTTP (for web pages), TCP/IP (for reliable data delivery) |
+| **Packet switching** | Data is split into small packets that travel independently across the network and are reassembled at the destination. | A video call splits audio and video into packets that may take different routes |
+| **Client-server** | A model where a client device requests a service and a server provides it. | My browser (client) requests a web page from Google's server |
+
+### Task 7.2 — Network Observations
+
+- **Connectivity test (`ping`):** Sending packets to `example.com` and receiving replies confirms that my computer can reach that server across the internet. If packets are lost or no reply comes, it indicates a network problem.
+- **DNS lookup (`nslookup`):** Running `nslookup example.com` returned an IP address (e.g., `93.184.216.34`). This shows the mapping from the domain name to a numeric address.
+- **Role of DNS:** When I type a website name in the browser, the browser asks a DNS server to look up the IP address for that domain. The browser then uses that IP address to contact the correct web server. Without DNS, I would have to memorise numeric IP addresses for every website.
+
+*(Personal IP addresses and network names have been redacted.)*
+
+### Task 7.3 — What Happens When You Open a Website (7 Steps)
+
+1. **User enters the URL:** I type `www.example.com` into the browser's address bar and press Enter. The browser acts as the **client**.
+2. **DNS lookup:** The browser sends a request to a **DNS server** to translate the domain name `www.example.com` into an IP address (e.g., `93.184.216.34`).
+3. **TCP connection:** Using the IP address, the browser establishes a connection to the web **server** using the **TCP/IP protocol**. This includes a three-way handshake to ensure both sides are ready.
+4. **HTTP request:** The browser sends an **HTTP** (or HTTPS) request to the server asking for the web page. The request travels as **packets** through **routers** across the network.
+5. **Server processes the request:** The web **server** receives the request, finds the requested page or resource, and prepares a response.
+6. **Server sends the response:** The server sends the HTML, CSS, images and other files back to the browser as data **packets**. These packets may travel through multiple **routers** and may take different paths.
+7. **Browser renders the page:** The browser receives the response packets, reassembles them and renders the HTML into the visual web page that I see on screen.
+
+## 5. Difficulties Faced
+No major difficulties. I needed to remember to redact my own IP address from the `ping` and `nslookup` output.
+
+## 6. How I Resolved Them
+I replaced personal details with `[redacted]` before saving any output.
+
+## 7. Evidence / Files
+- `README.md` — this file with network concepts, observations and the website-loading explanation.
+
+## 8. Commit Details
+**Commit message:** "Explain networking concepts and website communication"
+Work has been pushed to GitHub and verified.
